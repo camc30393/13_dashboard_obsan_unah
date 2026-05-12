@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actitudes y prácticas sobre el consumo de frutas y verduras en jóvenes — OBSAN-UNAH</title>
+<meta name="description" content="Estudio CAP en adolescentes de 12 a 18 años · 33 municipios de Honduras · Agosto 2025">
+
+<!--
+================================================================================
+  PÁGINA A · Cohorte 23 · Carrera de Nutrición UNAH
+  Actitudes y prácticas sobre el consumo de frutas y verduras en jóvenes
+  Plantilla OBSAN-UNAH v2 (con acordeones)
+================================================================================
+
+  CÓMO USAR
+  ---------
+  1. Archivo autocontenido (CSS + JS inline).
+  2. Para pegar en el CMS de OBSAN (SilverStripe):
+        a) Copia entre los comentarios:
+              ▼ INICIO BLOQUE COPIABLE AL CMS ▼
+              ▲ FIN BLOQUE COPIABLE AL CMS ▲
+        b) Pega en el contenedor HTML del CMS.
+  3. CSS scopeado bajo .obsan-tpl con prefijo "obs-".
+
+  REGLAS v2
+  ---------
+  · Tableros (Power BI) → acordeón abierto por defecto.
+  · Investigadores       → acordeón cerrado por defecto.
+  · Cita APA              → autoría OBSAN-UNAH por defecto,
+                            o cohorte/autor cuando aplique.
+================================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Estilos de demo (NO va al CMS, solo para previsualizar) -->
+<style>
+  body{margin:0;background:#eef2f7;font-family:'Inter',system-ui,sans-serif;}
+</style>
+
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     ▼ INICIO BLOQUE COPIABLE AL CMS ▼
+═══════════════════════════════════════════════════════════════════════ -->
+
+<style>
+/* ====================================================================
+   PLANTILLA OBSAN-UNAH v2 · CSS scopeado
+   ==================================================================== */
+
+.obsan-tpl {
+    --obs-blue-900:#00213d; --obs-blue-800:#002b55; --obs-blue-700:#003a75;
+    --obs-blue-600:#004a99; --obs-blue-500:#2563eb;
+    --obs-gold-600:#b8951a; --obs-gold-500:#c8a415; --obs-gold-400:#d4b52e;
+    --obs-green-700:#0f766e; --obs-green-600:#059669; --obs-green-500:#14b8a6;
+    --obs-bg:#ffffff; --obs-bg-soft:#f7f8fa; --obs-bg-tint:#f0f4fa;
+    --obs-border:#dce0e8; --obs-border-soft:#eef0f4;
+    --obs-text:#141c2b; --obs-text-2:#3e4759; --obs-text-3:#5b6478;
+    --obs-shadow-sm:0 2px 8px rgba(0,33,61,0.05);
+    --obs-shadow-md:0 10px 24px rgba(0,33,61,0.06);
+    --obs-shadow-lg:0 18px 40px rgba(0,33,61,0.10);
+    --obs-radius-sm:10px; --obs-radius-md:16px; --obs-radius-lg:22px; --obs-radius-xl:28px;
+    --obs-font-display:'Lora',Georgia,'Times New Roman',serif;
+    --obs-font-body:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+
+    max-width:1180px; margin:0 auto; padding:2.5rem 1.25rem 4rem 1.25rem;
+    font-family:var(--obs-font-body); color:var(--obs-text);
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    box-sizing:border-box; line-height:1.6;
+}
+
+.obsan-tpl *,.obsan-tpl *::before,.obsan-tpl *::after{box-sizing:border-box;}
+.obsan-tpl a{color:var(--obs-blue-700);text-decoration:none;transition:color .25s ease;}
+.obsan-tpl a:hover{color:var(--obs-gold-600);}
+.obsan-tpl img{max-width:100%;height:auto;display:block;}
+.obsan-tpl h1,.obsan-tpl h2,.obsan-tpl h3,.obsan-tpl h4,.obsan-tpl h5,.obsan-tpl h6{
+    font-family:var(--obs-font-display);color:var(--obs-text);line-height:1.2;margin:0;
+    font-weight:700;letter-spacing:-0.01em;
+}
+.obsan-tpl p{margin:0;color:var(--obs-text-2);}
+
+/* --- Animaciones sutiles (fade-in al hacer scroll) --- */
+.obsan-tpl .obs-reveal{opacity:0;transform:translateY(18px);
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+.obsan-tpl .obs-reveal.is-visible{opacity:1;transform:translateY(0);}
+.obsan-tpl .obs-reveal[data-delay="1"]{transition-delay:.08s;}
+.obsan-tpl .obs-reveal[data-delay="2"]{transition-delay:.16s;}
+.obsan-tpl .obs-reveal[data-delay="3"]{transition-delay:.24s;}
+.obsan-tpl .obs-reveal[data-delay="4"]{transition-delay:.32s;}
+@media (prefers-reduced-motion:reduce){.obsan-tpl .obs-reveal{opacity:1;transform:none;transition:none;}}
+
+/* ====================================================================
+   CABECERA DE CONTENIDO
+   ==================================================================== */
+.obsan-tpl .obs-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--obs-border-soft);}
+.obsan-tpl .obs-eyebrow{display:inline-flex;align-items:center;gap:8px;
+    font-size:11.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--obs-gold-600);margin-bottom:.9rem;}
+.obsan-tpl .obs-eyebrow::before{content:"";width:28px;height:2px;background:var(--obs-gold-500);}
+.obsan-tpl .obs-title{font-size:clamp(1.7rem,3vw + .5rem,2.5rem);line-height:1.1;
+    color:var(--obs-blue-900);font-weight:700;}
+.obsan-tpl .obs-title em{font-style:italic;color:var(--obs-green-700);}
+.obsan-tpl .obs-subtitle{margin-top:1rem;max-width:880px;font-size:1.02rem;
+    line-height:1.75;color:var(--obs-text-3);}
+.obsan-tpl .obs-meta{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;margin-top:1.2rem;
+    font-size:13.5px;color:var(--obs-text-3);}
+.obsan-tpl .obs-meta span strong{color:var(--obs-text);font-weight:600;}
+
+/* ====================================================================
+   HERO
+   ==================================================================== */
+.obsan-tpl .obs-hero{background:var(--obs-bg);border:1px solid var(--obs-border);
+    border-radius:var(--obs-radius-xl);overflow:hidden;box-shadow:var(--obs-shadow-md);margin-bottom:2.5rem;}
+.obsan-tpl .obs-hero-bar{height:6px;background:linear-gradient(90deg,
+    var(--obs-blue-700) 0%,var(--obs-blue-600) 35%,
+    var(--obs-gold-500) 65%,var(--obs-green-700) 100%);}
+.obsan-tpl .obs-hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;
+    gap:2rem;padding:2.2rem;align-items:center;}
+.obsan-tpl .obs-hero-text h2{font-size:1.6rem;margin-bottom:.8rem;color:var(--obs-blue-900);}
+.obsan-tpl .obs-hero-text p{font-size:1rem;line-height:1.85;text-align:justify;}
+.obsan-tpl .obs-hero-text p + p{margin-top:.85rem;}
+.obsan-tpl .obs-hero-media{border-radius:var(--obs-radius-lg);overflow:hidden;
+    background:var(--obs-bg-soft);border:1px solid var(--obs-border);
+    aspect-ratio:4/3;position:relative;}
+.obsan-tpl .obs-hero-media img{width:100%;height:100%;object-fit:cover;
+    transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.obsan-tpl .obs-hero-media:hover img{transform:scale(1.04);}
+.obsan-tpl .obs-placeholder{width:100%;height:100%;min-height:240px;
+    display:flex;align-items:center;justify-content:center;
+    background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(0,33,61,0.04) 14px 15px),
+        linear-gradient(180deg,var(--obs-bg-tint),var(--obs-bg));
+    color:var(--obs-text-3);font-size:13px;font-weight:500;letter-spacing:.5px;
+    text-align:center;padding:1rem;}
+
+/* ====================================================================
+   STATS
+   ==================================================================== */
+.obsan-tpl .obs-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:1.1rem;margin-bottom:2.5rem;}
+.obsan-tpl .obs-stat{background:var(--obs-bg);border:1px solid var(--obs-border);
+    border-radius:var(--obs-radius-md);padding:1.3rem 1.1rem;position:relative;
+    overflow:hidden;box-shadow:var(--obs-shadow-sm);
+    transition:transform .35s ease,box-shadow .35s ease;}
+.obsan-tpl .obs-stat:hover{transform:translateY(-4px);box-shadow:var(--obs-shadow-lg);}
+.obsan-tpl .obs-stat::before{content:"";position:absolute;top:0;left:0;right:0;
+    height:4px;background:var(--obs-blue-700);}
+.obsan-tpl .obs-stat.blue::before{background:linear-gradient(90deg,#1d4ed8,#60a5fa);}
+.obsan-tpl .obs-stat.gold::before{background:linear-gradient(90deg,var(--obs-gold-600),var(--obs-gold-400));}
+.obsan-tpl .obs-stat.green::before{background:linear-gradient(90deg,var(--obs-green-700),var(--obs-green-500));}
+.obsan-tpl .obs-stat.navy::before{background:linear-gradient(90deg,var(--obs-blue-900),var(--obs-blue-600));}
+.obsan-tpl .obs-stat-num{font-family:var(--obs-font-display);font-size:1.95rem;
+    font-weight:700;color:var(--obs-blue-900);line-height:1;margin-bottom:.35rem;}
+.obsan-tpl .obs-stat-label{font-size:14.5px;font-weight:700;color:var(--obs-text);margin-bottom:.25rem;}
+.obsan-tpl .obs-stat-desc{font-size:13px;line-height:1.55;color:var(--obs-text-3);}
+
+/* ====================================================================
+   SECCIÓN GENÉRICA
+   ==================================================================== */
+.obsan-tpl .obs-section{background:var(--obs-bg);border:1px solid var(--obs-border);
+    border-radius:var(--obs-radius-lg);overflow:hidden;box-shadow:var(--obs-shadow-md);
+    margin-bottom:2.5rem;}
+.obsan-tpl .obs-section-bar{height:5px;background:linear-gradient(90deg,
+    var(--obs-blue-700),var(--obs-gold-500),var(--obs-green-700));}
+.obsan-tpl .obs-section-head{padding:1.6rem 1.8rem 1rem 1.8rem;}
+.obsan-tpl .obs-section-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;
+    letter-spacing:2.2px;text-transform:uppercase;color:var(--obs-gold-600);margin-bottom:.55rem;}
+.obsan-tpl .obs-section-title{font-size:1.55rem;color:var(--obs-blue-900);}
+.obsan-tpl .obs-section-desc{margin-top:.75rem;font-size:14.5px;line-height:1.8;
+    color:var(--obs-text-3);max-width:920px;}
+.obsan-tpl .obs-section-body{padding:0 1.8rem 1.8rem 1.8rem;}
+
+/* ====================================================================
+   ★ SECCIÓN COLAPSABLE (ACORDEÓN) ★
+   Aplica .is-collapsible a un .obs-section para que el head sea
+   clickeable y el body se expanda/colapse con animación suave.
+   Estado inicial controlado por aria-expanded="true"|"false".
+   ==================================================================== */
+.obsan-tpl .obs-section.is-collapsible .obs-section-head {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 5rem;
+    transition: background .25s ease;
+}
+.obsan-tpl .obs-section.is-collapsible .obs-section-head:hover {
+    background: linear-gradient(180deg, rgba(0,58,117,0.025), transparent);
+}
+.obsan-tpl .obs-section.is-collapsible .obs-section-head:focus-visible {
+    outline: 3px solid var(--obs-gold-400);
+    outline-offset: -3px;
+    border-radius: var(--obs-radius-md);
+}
+.obsan-tpl .obs-section-chevron {
+    position: absolute;
+    right: 1.7rem;
+    top: 1.7rem;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--obs-blue-700);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .45s cubic-bezier(.2,.7,.2,1),
+                background .25s ease,
+                box-shadow .25s ease;
+    box-shadow: 0 6px 14px rgba(0,33,61,0.18);
+    flex-shrink: 0;
+}
+.obsan-tpl .obs-section-chevron svg {
+    width: 18px; height: 18px;
+    transition: transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.obsan-tpl .obs-section.is-collapsible .obs-section-head:hover .obs-section-chevron {
+    background: var(--obs-gold-600);
+    box-shadow: 0 10px 22px rgba(184,149,26,0.30);
+}
+.obsan-tpl .obs-section.is-collapsible[aria-expanded="true"] .obs-section-chevron svg {
+    transform: rotate(180deg);
+}
+.obsan-tpl .obs-section.is-collapsible .obs-section-body {
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transition: max-height .55s cubic-bezier(.2,.7,.2,1),
+                padding-top .35s ease,
+                padding-bottom .35s ease,
+                opacity .4s ease .1s;
+}
+.obsan-tpl .obs-section.is-collapsible[aria-expanded="true"] .obs-section-body {
+    max-height: 12000px;
+    padding-top: .5rem;
+    padding-bottom: 1.8rem;
+    opacity: 1;
+}
+/* En móvil, dejar espacio para el chevron sin solaparlo */
+@media (max-width: 640px) {
+    .obsan-tpl .obs-section.is-collapsible .obs-section-head { padding-right: 4rem; }
+    .obsan-tpl .obs-section-chevron { width: 34px; height: 34px; right: 1rem; top: 1.1rem; }
+    .obsan-tpl .obs-section-chevron svg { width: 15px; height: 15px; }
+}
+
+/* ====================================================================
+   TEXTO + IMAGEN ALTERNADO
+   ==================================================================== */
+.obsan-tpl .obs-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
+.obsan-tpl .obs-split.reverse{direction:rtl;}
+.obsan-tpl .obs-split.reverse > *{direction:ltr;}
+.obsan-tpl .obs-split-text h3{font-size:1.3rem;margin-bottom:.8rem;color:var(--obs-blue-900);}
+.obsan-tpl .obs-split-text p{font-size:14.5px;line-height:1.85;text-align:justify;}
+.obsan-tpl .obs-split-text p + p{margin-top:.8rem;}
+.obsan-tpl .obs-split-img{border-radius:var(--obs-radius-md);overflow:hidden;
+    aspect-ratio:4/3;background:var(--obs-bg-soft);border:1px solid var(--obs-border);}
+.obsan-tpl .obs-split-img img{width:100%;height:100%;object-fit:cover;}
+
+/* ====================================================================
+   CARDS
+   ==================================================================== */
+.obsan-tpl .obs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+.obsan-tpl .obs-card{background:var(--obs-bg);border:1px solid var(--obs-border);
+    border-radius:var(--obs-radius-md);overflow:hidden;box-shadow:var(--obs-shadow-sm);
+    transition:transform .35s ease,box-shadow .35s ease;display:flex;flex-direction:column;}
+.obsan-tpl .obs-card:hover{transform:translateY(-4px);box-shadow:var(--obs-shadow-lg);}
+.obsan-tpl .obs-card-bar{height:4px;background:var(--obs-blue-700);}
+.obsan-tpl .obs-card.blue .obs-card-bar{background:linear-gradient(90deg,#1d4ed8,#60a5fa);}
+.obsan-tpl .obs-card.gold .obs-card-bar{background:linear-gradient(90deg,var(--obs-gold-600),var(--obs-gold-400));}
+.obsan-tpl .obs-card.green .obs-card-bar{background:linear-gradient(90deg,var(--obs-green-700),var(--obs-green-500));}
+.obsan-tpl .obs-card.navy .obs-card-bar{background:linear-gradient(90deg,var(--obs-blue-900),var(--obs-blue-600));}
+.obsan-tpl .obs-card-body{padding:1.2rem 1.25rem;flex:1;}
+.obsan-tpl .obs-card-title{font-size:1.15rem;margin-bottom:.55rem;color:var(--obs-blue-900);}
+.obsan-tpl .obs-card-body p,.obsan-tpl .obs-card-body ul{font-size:14px;line-height:1.75;
+    color:var(--obs-text-3);margin:0;}
+.obsan-tpl .obs-card-body ul{padding-left:1.1rem;}
+.obsan-tpl .obs-card-body li{margin-bottom:.35rem;}
+
+/* ====================================================================
+   GALERÍA
+   ==================================================================== */
+.obsan-tpl .obs-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.obsan-tpl .obs-gallery figure{margin:0;border-radius:var(--obs-radius-md);overflow:hidden;
+    border:1px solid var(--obs-border);background:var(--obs-bg);box-shadow:var(--obs-shadow-sm);
+    transition:transform .35s ease,box-shadow .35s ease;}
+.obsan-tpl .obs-gallery figure:hover{transform:translateY(-3px);box-shadow:var(--obs-shadow-lg);}
+.obsan-tpl .obs-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease;}
+.obsan-tpl .obs-gallery figure:hover img{transform:scale(1.05);}
+.obsan-tpl .obs-gallery figcaption{padding:.65rem .85rem .85rem .85rem;font-size:12.5px;
+    color:var(--obs-text-3);line-height:1.5;}
+
+/* ====================================================================
+   PDF EMBEBIDO
+   ==================================================================== */
+.obsan-tpl .obs-pdf{border:1px solid var(--obs-border);border-radius:var(--obs-radius-md);
+    overflow:hidden;background:var(--obs-bg-soft);position:relative;box-shadow:var(--obs-shadow-sm);}
+.obsan-tpl .obs-pdf-frame{width:100%;height:720px;border:0;background:#fff;display:block;}
+.obsan-tpl .obs-pdf-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+    gap:.8rem;padding:.7rem 1rem;background:linear-gradient(180deg,var(--obs-bg-soft),var(--obs-bg));
+    border-bottom:1px solid var(--obs-border-soft);font-size:13px;color:var(--obs-text-3);}
+.obsan-tpl .obs-pdf-tools strong{color:var(--obs-text);}
+
+/* ====================================================================
+   BOTONES
+   ==================================================================== */
+.obsan-tpl .obs-btn{display:inline-flex;align-items:center;gap:7px;background:var(--obs-blue-700);
+    color:#fff !important;padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;
+    border:0;cursor:pointer;text-decoration:none;
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+    box-shadow:0 6px 14px rgba(0,33,61,0.15);font-family:var(--obs-font-body);}
+.obsan-tpl .obs-btn:hover{transform:translateY(-2px);background:var(--obs-blue-800);
+    box-shadow:0 12px 24px rgba(0,33,61,0.20);color:#fff !important;}
+.obsan-tpl .obs-btn.gold{background:var(--obs-gold-600);}
+.obsan-tpl .obs-btn.gold:hover{background:var(--obs-gold-500);}
+.obsan-tpl .obs-btn.green{background:var(--obs-green-700);}
+.obsan-tpl .obs-btn.green:hover{background:var(--obs-green-600);}
+.obsan-tpl .obs-btn.ghost{background:transparent;color:var(--obs-blue-700) !important;
+    border:1.5px solid var(--obs-blue-700);box-shadow:none;}
+.obsan-tpl .obs-btn.ghost:hover{background:var(--obs-blue-700);color:#fff !important;}
+
+/* ====================================================================
+   GRÁFICO / DASHBOARD
+   ==================================================================== */
+.obsan-tpl .obs-chart{border:1px solid var(--obs-border);border-radius:var(--obs-radius-md);
+    overflow:hidden;background:var(--obs-bg);box-shadow:var(--obs-shadow-sm);}
+.obsan-tpl .obs-chart-head{padding:1rem 1.2rem;border-bottom:1px solid var(--obs-border-soft);
+    background:linear-gradient(180deg,var(--obs-bg-tint),var(--obs-bg));}
+.obsan-tpl .obs-chart-title{font-size:1.05rem;font-weight:700;color:var(--obs-blue-900);margin-bottom:.25rem;}
+.obsan-tpl .obs-chart-sub{font-size:12.5px;color:var(--obs-text-3);}
+.obsan-tpl .obs-chart-frame{width:100%;height:600px;border:0;display:block;}
+.obsan-tpl .obs-chart-foot{padding:.65rem 1.2rem;background:var(--obs-bg-soft);
+    border-top:1px solid var(--obs-border-soft);font-size:12px;color:var(--obs-text-3);line-height:1.55;}
+
+/* ====================================================================
+   LISTA DE INVESTIGADORES (compacta, grid multicolumna)
+   ==================================================================== */
+.obsan-tpl .obs-team{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:.4rem .9rem;
+    list-style:none; padding:0; margin:0;
+    font-size:13.5px; color:var(--obs-text-2);
+}
+.obsan-tpl .obs-team li{
+    padding:6px 10px;
+    background:var(--obs-bg-soft);
+    border-radius:8px;
+    border-left:3px solid var(--obs-green-700);
+    line-height:1.4;
+    transition:transform .25s ease, background .25s ease;
+}
+.obsan-tpl .obs-team li:hover{transform:translateX(3px);background:#eaf3f1;}
+.obsan-tpl .obs-team-meta{
+    margin-bottom:1rem;font-size:13px;color:var(--obs-text-3);
+}
+.obsan-tpl .obs-team-meta strong{color:var(--obs-text);}
+
+/* ====================================================================
+   TIMELINE
+   ==================================================================== */
+.obsan-tpl .obs-timeline{display:grid;gap:1rem;}
+.obsan-tpl .obs-tl-item{position:relative;border-left:4px solid var(--obs-green-700);
+    background:linear-gradient(180deg,#f4feff 0%,#ffffff 100%);
+    border-radius:0 var(--obs-radius-md) var(--obs-radius-md) 0;
+    padding:1rem 1.2rem;box-shadow:var(--obs-shadow-sm);transition:transform .3s ease;}
+.obsan-tpl .obs-tl-item:hover{transform:translateX(4px);}
+.obsan-tpl .obs-tl-date{font-weight:700;font-size:14.5px;color:var(--obs-blue-900);margin-bottom:.25rem;}
+.obsan-tpl .obs-tl-desc{font-size:14px;line-height:1.7;color:var(--obs-text-3);}
+
+/* ====================================================================
+   CALLOUTS
+   ==================================================================== */
+.obsan-tpl .obs-callout{background:linear-gradient(180deg,#fffdf6 0%,#ffffff 100%);
+    border:1px solid #f0e2a8;border-radius:var(--obs-radius-md);padding:1rem 1.2rem;
+    margin:1rem 0;font-size:14px;line-height:1.75;color:var(--obs-text-2);
+    border-left:4px solid var(--obs-gold-500);}
+.obsan-tpl .obs-callout strong{color:var(--obs-blue-900);}
+.obsan-tpl .obs-callout.green{background:linear-gradient(180deg,#f3fbf9 0%,#ffffff 100%);
+    border-color:#b8e0d6;border-left-color:var(--obs-green-700);}
+.obsan-tpl .obs-callout.blue{background:linear-gradient(180deg,#f4f8ff 0%,#ffffff 100%);
+    border-color:#c8d8f4;border-left-color:var(--obs-blue-700);}
+
+/* ====================================================================
+   CITA APA
+   ==================================================================== */
+.obsan-tpl .obs-cite{margin-top:3.5rem;
+    background:linear-gradient(180deg,var(--obs-blue-900) 0%,var(--obs-blue-800) 100%);
+    color:#fff;border-radius:var(--obs-radius-lg);padding:2rem;
+    position:relative;overflow:hidden;box-shadow:var(--obs-shadow-lg);}
+.obsan-tpl .obs-cite::before{content:""";position:absolute;top:-40px;left:20px;
+    font-family:Georgia,serif;font-size:14rem;color:rgba(200,164,21,0.12);
+    line-height:1;pointer-events:none;}
+.obsan-tpl .obs-cite-eyebrow{display:inline-flex;align-items:center;gap:8px;
+    font-size:11.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--obs-gold-400);margin-bottom:.9rem;}
+.obsan-tpl .obs-cite-eyebrow::before{content:"";width:24px;height:2px;background:var(--obs-gold-400);}
+.obsan-tpl .obs-cite-title{font-family:var(--obs-font-display);font-size:1.5rem;color:#fff;margin-bottom:.35rem;}
+.obsan-tpl .obs-cite-intro{font-size:13.5px;color:rgba(255,255,255,0.7);margin-bottom:1.2rem;
+    max-width:720px;line-height:1.6;}
+.obsan-tpl .obs-cite-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
+    border-radius:var(--obs-radius-md);padding:1.2rem 1.3rem;font-size:15px;line-height:1.85;
+    color:#ffffff;font-family:var(--obs-font-display);position:relative;}
+.obsan-tpl .obs-cite-text{color:#ffffff;margin:0;}
+.obsan-tpl .obs-cite-text em{font-style:italic;color:#ffe7a6;}
+.obsan-tpl .obs-cite-text a{color:#9ec5ff;word-break:break-all;
+    border-bottom:1px dotted rgba(158,197,255,0.5);}
+.obsan-tpl .obs-cite-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;}
+.obsan-tpl .obs-cite-actions .obs-btn{background:var(--obs-gold-500);color:var(--obs-blue-900) !important;}
+.obsan-tpl .obs-cite-actions .obs-btn:hover{background:var(--obs-gold-400);color:var(--obs-blue-900) !important;}
+.obsan-tpl .obs-cite-actions .obs-btn.ghost{background:transparent;
+    border-color:rgba(255,255,255,0.4);color:#fff !important;box-shadow:none;}
+.obsan-tpl .obs-cite-actions .obs-btn.ghost:hover{background:rgba(255,255,255,0.1);color:#fff !important;}
+.obsan-tpl .obs-cite-toast{position:absolute;top:1.2rem;right:1.3rem;
+    background:var(--obs-green-600);color:#fff;padding:6px 12px;border-radius:999px;
+    font-size:12.5px;font-weight:600;opacity:0;transform:translateY(-6px);
+    transition:opacity .3s ease,transform .3s ease;pointer-events:none;}
+.obsan-tpl .obs-cite-toast.show{opacity:1;transform:translateY(0);}
+
+/* ====================================================================
+   RESPONSIVE
+   ==================================================================== */
+@media (max-width:980px){
+    .obsan-tpl .obs-hero-grid{grid-template-columns:1fr;padding:1.5rem;}
+    .obsan-tpl .obs-stats{grid-template-columns:repeat(2,1fr);}
+    .obsan-tpl .obs-split{grid-template-columns:1fr;}
+    .obsan-tpl .obs-split.reverse{direction:ltr;}
+    .obsan-tpl .obs-pdf-frame{height:580px;}
+    .obsan-tpl .obs-chart-frame{height:500px;}
+}
+@media (max-width:640px){
+    .obsan-tpl{padding:1.5rem 1rem 3rem 1rem;}
+    .obsan-tpl .obs-stats{grid-template-columns:1fr;}
+    .obsan-tpl .obs-section-head,.obsan-tpl .obs-section-body{padding-left:1.2rem;padding-right:1.2rem;}
+    .obsan-tpl .obs-section.is-collapsible .obs-section-body{padding-left:1.2rem;padding-right:1.2rem;}
+    .obsan-tpl .obs-hero-text h2{font-size:1.35rem;}
+    .obsan-tpl .obs-section-title{font-size:1.3rem;}
+    .obsan-tpl .obs-cite{padding:1.4rem;}
+    .obsan-tpl .obs-cite-title{font-size:1.25rem;}
+    .obsan-tpl .obs-cite-box{font-size:14px;padding:1rem;}
+    .obsan-tpl .obs-pdf-frame{height:460px;}
+    .obsan-tpl .obs-chart-frame{height:420px;}
+}
+</style>
+
+<div class="obsan-tpl">
+
+    <!-- ▶ CABECERA ◀ -->
+    <header class="obs-header obs-reveal">
+        <span class="obs-eyebrow">Observatorio en Seguridad alimentaria y Nutricional (OBSAN) · Carrera de Nutrición · UNAH</span>
+        <h1 class="obs-title">Actitudes y prácticas sobre el consumo de <em>frutas y verduras</em> en jóvenes</h1>
+        <p class="obs-subtitle">
+            Estudio sobre conocimientos, actitudes y prácticas relacionados con el consumo de frutas y verduras
+            en adolescentes de 12 a 18 años, realizado en 33 municipios de Honduras durante agosto de 2025
+            por estudiantes de la Cohorte 23 de la Carrera de Nutrición de la UNAH.
+        </p>
+        <div class="obs-meta">
+            <span><strong>Cohorte:</strong> 23 — Carrera de Nutrición, UNAH</span>
+            <span><strong>Periodo:</strong> Agosto 2025</span>
+            <span><strong>Cobertura:</strong> 33 municipios de Honduras</span>
+            <span><strong>Área:</strong> Seguridad Alimentaria y Nutricional</span>
+        </div>
+    </header>
+
+    <!-- ▶ HERO ◀ -->
+    <section class="obs-hero obs-reveal">
+        <div class="obs-hero-bar"></div>
+        <div class="obs-hero-grid">
+            <div class="obs-hero-text">
+                <h2>Conocer para transformar los hábitos alimentarios</h2>
+                <p>
+                    El consumo insuficiente de frutas y verduras es uno de los principales factores de riesgo
+                    para enfermedades no transmisibles en adolescentes hondureños. Comprender qué saben,
+                    qué piensan y qué hacen los jóvenes alrededor de estos alimentos es la base para diseñar
+                    intervenciones efectivas en salud pública.
+                </p>
+                <p>
+                    Este estudio aplica el enfoque <strong>CAP (Conocimientos, Actitudes y Prácticas)</strong>
+                    en una muestra de adolescentes de 12 a 18 años en 33 municipios del país, generando
+                    evidencia útil para programas educativos, políticas alimentarias municipales y la toma
+                    de decisiones del OBSAN-UNAH.
+                </p>
+            </div>
+            <div class="obs-hero-media">
+                <div class="obs-placeholder">
+                     <img src="https://obsan.unah.edu.hn/assets/OBSAN/parrafoconimagen/2026-05-11-Img-01.png" alt="Actitudes y prácticas sobre el consumo de frutas y verduras en jóvenes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▶ STATS ◀ -->
+    <section class="obs-stats">
+        <div class="obs-stat blue obs-reveal" data-delay="1">
+            <p class="obs-stat-num">33</p>
+            <h3 class="obs-stat-label">Municipios</h3>
+            <p class="obs-stat-desc">Cobertura geográfica nacional del estudio.</p>
+        </div>
+        <div class="obs-stat gold obs-reveal" data-delay="2">
+            <p class="obs-stat-num">12–18</p>
+            <h3 class="obs-stat-label">Años</h3>
+            <p class="obs-stat-desc">Rango etario de los adolescentes participantes.</p>
+        </div>
+        <div class="obs-stat green obs-reveal" data-delay="3">
+            <p class="obs-stat-num">18</p>
+            <h3 class="obs-stat-label">Investigadores</h3>
+            <p class="obs-stat-desc">Estudiantes Cohorte 23 que ejecutaron el estudio.</p>
+        </div>
+        <div class="obs-stat navy obs-reveal" data-delay="4">
+            <p class="obs-stat-num">CAP</p>
+            <h3 class="obs-stat-label">Metodología</h3>
+            <p class="obs-stat-desc">Conocimientos, Actitudes y Prácticas en consumo alimentario.</p>
+        </div>
+    </section>
+
+    <!-- ▶ CARDS · Dimensiones del estudio ◀ -->
+    <section class="obs-section obs-reveal">
+        <div class="obs-section-bar"></div>
+        <div class="obs-section-head">
+            <span class="obs-section-eyebrow">Dimensiones del estudio</span>
+            <h2 class="obs-section-title">¿Qué se midió?</h2>
+            <p class="obs-section-desc">
+                El instrumento aplicado evalúa tres dimensiones complementarias del comportamiento alimentario,
+                cada una con indicadores propios visualizados en el tablero interactivo.
+            </p>
+        </div>
+        <div class="obs-section-body">
+            <div class="obs-cards">
+                <article class="obs-card blue obs-reveal" data-delay="1">
+                    <div class="obs-card-bar"></div>
+                    <div class="obs-card-body">
+                        <h3 class="obs-card-title">Conocimientos</h3>
+                        <p>Nivel de información sobre la importancia, cantidades recomendadas y beneficios del consumo de frutas y verduras.</p>
+                    </div>
+                </article>
+                <article class="obs-card gold obs-reveal" data-delay="2">
+                    <div class="obs-card-bar"></div>
+                    <div class="obs-card-body">
+                        <h3 class="obs-card-title">Actitudes</h3>
+                        <p>Disposición, creencias, valoraciones y barreras percibidas frente al consumo regular en la dieta diaria.</p>
+                    </div>
+                </article>
+                <article class="obs-card green obs-reveal" data-delay="3">
+                    <div class="obs-card-bar"></div>
+                    <div class="obs-card-body">
+                        <h3 class="obs-card-title">Prácticas</h3>
+                        <p>Conductas reales: frecuencia, variedad, lugar de consumo y patrones de preparación en el día a día.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="obs-callout green">
+                <strong>Hallazgo clave:</strong> los datos del tablero permiten identificar brechas entre lo que
+                los adolescentes saben sobre alimentación saludable y lo que efectivamente hacen, insumo crítico
+                para el diseño de intervenciones educativas en escuelas y comunidades.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ▶ CARDS · Principales Hallazgos ◀ -->
+    <section class="obs-section obs-reveal">
+        <div class="obs-section-bar"></div>
+        <div class="obs-section-head">
+            <span class="obs-section-eyebrow">Consumo de Frutas y Verduras</span>
+            <h2 class="obs-section-title">Principales Hallazgos</h2>
+            <p class="obs-section-desc">
+                A continuación se presentan los resultados más relevantes en cada dimensión, con un enfoque en las
+                actitudes y prácticas de los adolescentes, que revelan tanto oportunidades como desafíos para
+                promover una alimentación más saludable.
+            </p>
+        </div>
+        <div class="obs-section-body">
+            <div class="obs-cards">
+                <article class="obs-card blue obs-reveal" data-delay="1">
+                    <div class="obs-card-bar"></div>
+                    <div class="obs-card-body">
+                        <h3 class="obs-card-title">Conocimientos: reconocimiento parcial con brechas críticas</h3>
+                        <ul>
+                            <li><p><strong>Conocimiento de recomendaciones:</strong> Cerca de la mitad de los adolescentes identifica la recomendación de 3 a 4 porciones diarias tanto para frutas (49.21%) como para verduras (49.53%); persiste un 36.40% que la subestima a 1–2 porciones de frutas.</p></li>
+                            <li><p><strong>Reconocimiento de beneficios:</strong> Existe un alto reconocimiento de los beneficios generales: 87.41% afirma que las frutas hidratan, 93.10% que contribuyen a la salud y 83.13% que las verduras previenen enfermedades.</p></li>
+                            <li><p><strong>Brechas en educación alimentaria:</strong> Se evidencian brechas de educación alimentaria: solo el 45.75% reconoce la importancia de consumir frutas de diversos colores y un 30.26% no sabe si las verduras aportan fibra.</p></li>
+                            <li><p><strong>Clasificación botánico-alimentaria:</strong> En clasificación botánico-alimentaria, el 75.55% afirma diferenciar entre fruta y verdura, pero el 72.48% confunde el tomate (lo cataloga como verdura), y solo el 56.08% identifica la papa como tubérculo.</p></li>
+                            <li><p><strong>Conservación de micronutrientes:</strong> En conservación de micronutrientes, predomina el conocimiento del vapor (58.07%) como método adecuado, mientras la cocción al horno (4.38%) es marginal en el imaginario adolescente.</p></li>
+                            <li><p><strong>Importancia del lavado:</strong> El 90.11% reconoce la importancia del lavado de frutas y verduras como práctica preventiva.</p></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="obs-section-body">
+            <div class="obs-cards">
+                <article class="obs-card green obs-reveal" data-delay="2">
+                    <div class="obs-card-bar"></div>
+                    <div class="obs-card-body">
+                        <h3 class="obs-card-title">Actitudes: disposición favorable con tensiones culturales y digitales</h3>
+                        <ul>
+                            <li><p><strong>Actitud hacia el consumo de frutas:</strong> La actitud hacia el consumo de frutas es ampliamente positiva (96.84% acuerdo total o parcial), seguida de las verduras (82.45%).</p></li>
+                            <li><p><strong>Asociación con rendimiento académico:</strong> El 89.60% asocia el consumo de frutas con mejor rendimiento académico y el 81.42% prefiere frutas sobre productos ultraprocesados ("chucherías").</p></li>
+                            <li><p><strong>Consumo por obligación:</strong> Un hallazgo crítico es que el 52.10% declara consumir verduras por obligación, lo que sugiere una dimensión coercitiva o normativa más que de disfrute, con implicaciones para la sostenibilidad del hábito.</p></li>
+                            <li><p><strong>Entorno del hogar:</strong> El entorno del hogar es percibido como favorable a una dieta rica en frutas y verduras por el 87.03% de los adolescentes.</p></li>
+                            <li><p><strong>Influencias externas:</strong> En cuanto a influencias externas: 30.60% reconoce influencia de creencias religiosas en su alimentación y 48.40% atribuye un rol a las redes sociales en su consumo, lo que abre una ventana de oportunidad para estrategias de comunicación digital en salud.</p></li>
+                            <li><p><strong>Vinculación con alimentación saludable:</strong> El 94.84% vincula explícitamente a las frutas y verduras con una alimentación saludable.</p></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="obs-section-body">
+            <div class="obs-cards">
+                <article class="obs-card gold obs-reveal" data-delay="3">
+                    <div class="obs-card-bar"></div>
+                    <div class="obs-card-body">
+                        <h3 class="obs-card-title">Prácticas: frecuencia moderada y patrones diferenciados por momento del día</h3>
+                        <ul>
+                            <li><p><strong>Frecuencia de consumo de frutas:</strong> 22.16% diario, 41.04% de 3 a 4 veces por semana, 28.82% de 1 a 2 veces y un 7.98% con consumo escaso o nulo.</p></li>
+                            <li><p><strong>Frecuencia de consumo de verduras:</strong> 24.01% diario, 42.97% de 3 a 4 veces por semana, con un 7.20% en consumo bajo o nulo.</p></li>
+                            <li><p><strong>Momentos del día:</strong> las frutas se consumen principalmente en la merienda matutina (54.15%) y la merienda vespertina (37.20%); las verduras se concentran en el almuerzo (69.62%), lo que refleja un patrón cultural arraigado del plato principal.</p></li>
+                            <li><p><strong>Formas de preparación preferidas:</strong> frutas crudas y enteras (45.45%), seguidas de licuados (23.39%); verduras cocidas (70.74%) por encima de las crudas (37.50%), con baja presencia de fritas (17.11%).</p></li>
+                            <li><p><strong>Espacio escolar:</strong> el 52.3% consume frutas dentro del centro educativo, lo que confirma a la escuela como un escenario estratégico para intervenciones de educación alimentaria y entornos saludables.</p></li>
+                            <li><p><strong>Responsabilidad de la preparación:</strong> la madre concentra el 80.78% del rol preparador del alimento en el hogar, evidenciando una marcada feminización del trabajo de cuidado alimentario; los propios adolescentes participan en un 16.07%.</p></li>
+                            <li><p><strong>Acceso y agencia:</strong> el 69.35% participa en la compra de frutas y verduras del hogar, el 94.39% declara motivación por salud para consumir verduras, y el 91.11% percibe disponibilidad de estos alimentos en su comunidad —indicando que las barreras predominantes son comportamentales y educativas, más que de disponibilidad física.</p></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▶ TABLERO POWER BI EN ACORDEÓN (abierto) ◀ -->
+    <section class="obs-section is-collapsible obs-reveal" aria-expanded="true">
+        <div class="obs-section-bar"></div>
+        <div class="obs-section-head" role="button" tabindex="0">
+            <span class="obs-section-eyebrow">VISUALIZACIÓN DE DATOS</span>
+            <h2 class="obs-section-title">Tablero interactivo de resultados</h2>
+            <p class="obs-section-desc">
+                Dashboard en Power BI con la evidencia recolectada: distribución por municipio, edad y sexo,
+                indicadores CAP y comparativos territoriales. Haga clic en el encabezado para colapsar/expandir.
+            </p>
+            <span class="obs-section-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </div>
+        <div class="obs-section-body">
+            <div class="obs-chart">
+                <div class="obs-chart-head">
+                    <div class="obs-chart-title">CAP · Consumo de frutas y verduras en adolescentes 12–18 años</div>
+                    <div class="obs-chart-sub">Fuente: Levantamiento Cohorte 23, Carrera de Nutrición UNAH · Agosto 2025 · 33 municipios</div>
+                </div>
+                <iframe class="obs-chart-frame"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiMjM1OGFjZjItMTkwYS00ZjJlLWI2YTktYzY1ZjVjMjdkM2Q4IiwidCI6IjQzMDU1N2I5LTc2N2MtNGNlOS1hZTU2LTk3MTc3NWE4OTdhOCIsImMiOjR9&amp;pageName=8dd425d009abbff02e91"
+                        title="Tablero Power BI · Actitudes y prácticas sobre consumo de frutas y verduras"
+                        loading="lazy"
+                        allowfullscreen></iframe>
+                <div class="obs-chart-foot">
+                    <strong>Elaboración:</strong> OBSAN-UNAH con datos de la Cohorte 23 ·
+                    <strong>Periodo:</strong> Agosto 2025 ·
+                    <strong>Cobertura:</strong> 33 municipios de Honduras
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▶ PDF ◀ -->
+    <section class="obs-section obs-reveal">
+    <div class="obs-section-bar"></div>
+    <div class="obs-section-head">
+        <span class="obs-section-eyebrow">DOCUMENTO COMPLETO</span>
+        <h2 class="obs-section-title">Informe del estudio en PDF</h2>
+        <p class="obs-section-desc">
+            Documento técnico que incluye metodología, instrumentos, resultados desagregados
+            y recomendaciones derivadas del estudio.
+        </p>
+    </div>
+    <div class="obs-section-body">
+        <div class="obs-pdf">
+            <div class="obs-pdf-tools">
+                <span><strong>Artículo · Actitudes y prácticas sobre consumo de frutas y verduras</strong> · 19 pp · 118 KB · Publicado 04/05/2026</span>
+                <div style="display:flex; gap:.5rem;">
+                    <a class="obs-btn ghost" href="https://obsan.unah.edu.hn/dmsdocument/20862-articulo-sobre-actitudes-y-practicas-que-tienen-los-jovenes-de-32-centros-publicos-de-educacion-media-en-honduras-sobre-el-consumo-de-frutas-y-verduras-pdf" target="_blank" rel="noopener">Abrir en pestaña nueva ↗</a>
+                    <a class="obs-btn" href="https://obsan.unah.edu.hn/dmsdocument/20862-articulo-sobre-actitudes-y-practicas-que-tienen-los-jovenes-de-32-centros-publicos-de-educacion-media-en-honduras-sobre-el-consumo-de-frutas-y-verduras-pdf" download>Descargar PDF</a>
+                </div>
+            </div>
+            <iframe class="obs-pdf-frame"
+                    src="https://obsan.unah.edu.hn/dmsdocument/20862-articulo-sobre-actitudes-y-practicas-que-tienen-los-jovenes-de-32-centros-publicos-de-educacion-media-en-honduras-sobre-el-consumo-de-frutas-y-verduras-pdf"
+                    title="Artículo sobre actitudes y prácticas en el consumo de frutas y verduras"
+                    loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+    <!-- ▶ INVESTIGADORES EN ACORDEÓN (cerrado por defecto) ◀ -->
+    <section class="obs-section is-collapsible obs-reveal" aria-expanded="false">
+        <div class="obs-section-bar"></div>
+        <div class="obs-section-head" role="button" tabindex="0">
+            <span class="obs-section-eyebrow">EQUIPO DE INVESTIGACIÓN</span>
+            <h2 class="obs-section-title">Investigadores · Cohorte 23</h2>
+            <p class="obs-section-desc">
+                Estudiantes de la Carrera de Nutrición de la UNAH que diseñaron, aplicaron y analizaron el estudio.
+                Haga clic para expandir la lista completa.
+            </p>
+            <span class="obs-section-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </div>
+        <div class="obs-section-body">
+            <div class="obs-team-meta">
+                <strong>Total:</strong> 18 investigadores ·
+                <strong>Unidad académica:</strong> Carrera de Nutrición, UNAH ·
+                <strong>Cohorte:</strong> 23
+            </div>
+            <ul class="obs-team">
+                <li>Adilia Patricia Rodríguez</li><li>Alejandra María Alemán Rosales</li><li>Alisson Yolani Mondragón Henríquez</li><li>Ana Gabriela Castillo</li><li>Ana Paola Barahona Riera</li><li>Belkis Ninoska Rodríguez Vásquez</li><li>Cesia Daniela Gutiérrez Flores</li><li>Emely Lorett Portillo Inestroza</li><li>Isaac Alfredo Oseguera Panchamé</li><li>Jennifer Anahi Sánchez Turcios</li><li>Jennifer Pamela Nelson Zerón</li><li>Kimberly Marcela Baquedano Corea</li><li>Maryery Lizbeth León Fuentes</li><li>Maryuri Leonela Aceituno Romero</li><li>Mauricio Alejandro Lainez</li><li>Senia María Silva Reyes</li><li>Tania Isabel Acosta Martines</li><li>Tifany Alejandra Larios Urrutia</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ▶ CITA APA (autoría específica = cohorte) ◀ -->
+    <aside class="obs-cite obs-reveal"
+           data-autores="OBSAN - UNAH"
+           data-anio="2025"
+           data-titulo="Actitudes y prácticas que tienen los jóvenes de 32 centros públicos de educación media en Honduras, sobre el consumo de frutas y verduras, septiembre 2025"
+           data-departamento="Observatorio Universitario en Seguridad Alimentaria y Nutricional (OBSAN)"
+           data-institucion="Universidad Nacional Autónoma de Honduras (UNAH)"
+           data-sitio="OBSAN-UNAH"
+           data-url="https://obsan.unah.edu.hn/dashboard-san/situacion-alimentaria-y-nutricion-honduras/actitudes-y-practicas-sobre-el-consumo-de-frutas-y-verduras-en-jovenes/"
+           data-doi=""
+           data-fecha-consulta="11 de mayo de 2026">
+        <div class="obs-cite-toast">✓ Copiado al portapapeles</div>
+        <span class="obs-cite-eyebrow">Cómo citar este contenido</span>
+        <h2 class="obs-cite-title">Referencia bibliográfica · Formato APA 7</h2>
+        <p class="obs-cite-intro">
+            Si utilizas este contenido en un trabajo académico, te agradecemos citarlo con la siguiente
+            referencia. Puedes copiarla al portapapeles con el botón.
+        </p>
+        <blockquote class="obs-cite-box"><p class="obs-cite-text"></p></blockquote>
+        <div class="obs-cite-actions">
+            <button type="button" class="obs-btn obs-cite-copy">Copiar cita APA</button>
+            <button type="button" class="obs-btn ghost obs-cite-copy-html">Copiar como texto enriquecido</button>
+        </div>
+    </aside>
+
+</div>
+
+<script>
+(function(){
+    'use strict';
+
+    // -----------------------------------------------------------------
+    // 1) Animación fade-in al scroll
+    // -----------------------------------------------------------------
+    var reveals = document.querySelectorAll('.obsan-tpl .obs-reveal');
+    if ('IntersectionObserver' in window && reveals.length) {
+        var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function(el){ io.observe(el); });
+    } else {
+        reveals.forEach(function(el){ el.classList.add('is-visible'); });
+    }
+
+    // -----------------------------------------------------------------
+    // 2) Acordeones colapsables — .obs-section.is-collapsible
+    //    Estado controlado por aria-expanded en la <section>.
+    //    Soporta click y teclado (Enter / Espacio).
+    // -----------------------------------------------------------------
+    document.querySelectorAll('.obsan-tpl .obs-section.is-collapsible').forEach(function(section){
+        var head = section.querySelector('.obs-section-head');
+        if (!head) return;
+
+        // Asegurar atributos ARIA
+        if (!head.hasAttribute('role')) head.setAttribute('role','button');
+        if (!head.hasAttribute('tabindex')) head.setAttribute('tabindex','0');
+        if (!section.hasAttribute('aria-expanded')) section.setAttribute('aria-expanded','false');
+
+        function toggle(){
+            var expanded = section.getAttribute('aria-expanded') === 'true';
+            section.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            head.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }
+        // sincronizar aria-expanded del head con el de section al inicio
+        head.setAttribute('aria-expanded', section.getAttribute('aria-expanded'));
+
+        head.addEventListener('click', toggle);
+        head.addEventListener('keydown', function(e){
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    });
+
+    // -----------------------------------------------------------------
+    // 3) Cita APA — construye y copia al portapapeles
+    //    Soporta múltiples bloques .obs-cite en la misma página.
+    // -----------------------------------------------------------------
+    function clean(v){
+        if (!v) return '';
+        v = v.trim();
+        if (/^\{\{.*\}\}$/.test(v)) return '';
+        return v;
+    }
+
+    function buildHTML(d){
+        var parts = [];
+        if (d.autores) parts.push(d.autores);
+        else if (d.institucion) parts.push(d.institucion);
+        parts.push(d.anio ? '(' + d.anio + ').' : '(s. f.).');
+        if (d.titulo) parts.push('<em>' + d.titulo + '</em>.');
+        var editor = [];
+        if (d.autores || !d.institucion) {
+            if (d.departamento) editor.push(d.departamento);
+            if (d.institucion)  editor.push(d.institucion);
+        }
+        if (editor.length) parts.push(editor.join(', ') + '.');
+        if (d.doi) {
+            var u = /^https?:/i.test(d.doi) ? d.doi : 'https://doi.org/' + d.doi;
+            parts.push('<a href="' + u + '" target="_blank" rel="noopener">' + u + '</a>');
+        } else if (d.url) {
+            if (d.fechaConsulta) {
+                parts.push('Recuperado el ' + d.fechaConsulta + ', de ' +
+                    '<a href="' + d.url + '" target="_blank" rel="noopener">' + d.url + '</a>');
+            } else {
+                parts.push('<a href="' + d.url + '" target="_blank" rel="noopener">' + d.url + '</a>');
+            }
+        }
+        return parts.join(' ');
+    }
+
+    function buildText(d){
+        var parts = [];
+        if (d.autores) parts.push(d.autores);
+        else if (d.institucion) parts.push(d.institucion);
+        parts.push(d.anio ? '(' + d.anio + ').' : '(s. f.).');
+        if (d.titulo) parts.push(d.titulo + '.');
+        var editor = [];
+        if (d.autores || !d.institucion) {
+            if (d.departamento) editor.push(d.departamento);
+            if (d.institucion)  editor.push(d.institucion);
+        }
+        if (editor.length) parts.push(editor.join(', ') + '.');
+        if (d.doi) {
+            var u = /^https?:/i.test(d.doi) ? d.doi : 'https://doi.org/' + d.doi;
+            parts.push(u);
+        } else if (d.url) {
+            if (d.fechaConsulta) parts.push('Recuperado el ' + d.fechaConsulta + ', de ' + d.url);
+            else parts.push(d.url);
+        }
+        return parts.join(' ');
+    }
+
+    function copyPlain(t){
+        if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+        return new Promise(function(res, rej){
+            try {
+                var ta = document.createElement('textarea');
+                ta.value = t; ta.style.position='fixed'; ta.style.opacity='0';
+                document.body.appendChild(ta); ta.select();
+                document.execCommand('copy'); document.body.removeChild(ta); res();
+            } catch(e){ rej(e); }
+        });
+    }
+
+    function copyRich(html, plain){
+        if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+            var item = new ClipboardItem({
+                'text/html':  new Blob([html],  { type:'text/html'  }),
+                'text/plain': new Blob([plain], { type:'text/plain' })
+            });
+            return navigator.clipboard.write([item]);
+        }
+        return copyPlain(plain);
+    }
+
+    function showToast(el, msg){
+        if (!el) return;
+        el.textContent = msg || '✓ Copiado al portapapeles';
+        el.classList.add('show');
+        clearTimeout(el._t);
+        el._t = setTimeout(function(){ el.classList.remove('show'); }, 1800);
+    }
+
+    document.querySelectorAll('.obs-cite').forEach(function(cite){
+        var d = {
+            autores:       clean(cite.dataset.autores),
+            anio:          clean(cite.dataset.anio),
+            titulo:        clean(cite.dataset.titulo),
+            departamento:  clean(cite.dataset.departamento),
+            institucion:   clean(cite.dataset.institucion),
+            sitio:         clean(cite.dataset.sitio),
+            url:           clean(cite.dataset.url),
+            doi:           clean(cite.dataset.doi),
+            fechaConsulta: clean(cite.dataset['fechaConsulta'])
+        };
+        var textEl  = cite.querySelector('.obs-cite-text');
+        var toastEl = cite.querySelector('.obs-cite-toast');
+        var btnPlain= cite.querySelector('.obs-cite-copy');
+        var btnHtml = cite.querySelector('.obs-cite-copy-html');
+
+        if (textEl) textEl.innerHTML = buildHTML(d);
+
+        if (btnPlain) btnPlain.addEventListener('click', function(){
+            copyPlain(buildText(d))
+                .then(function(){ showToast(toastEl, '✓ Cita copiada (texto plano)'); })
+                .catch(function(){ showToast(toastEl, '✗ No se pudo copiar'); });
+        });
+        if (btnHtml) btnHtml.addEventListener('click', function(){
+            copyRich(buildHTML(d), buildText(d))
+                .then(function(){ showToast(toastEl, '✓ Cita copiada (con formato)'); })
+                .catch(function(){ showToast(toastEl, '✗ No se pudo copiar'); });
+        });
+    });
+
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     ▲ FIN BLOQUE COPIABLE AL CMS ▲
+═══════════════════════════════════════════════════════════════════════ -->
+
+</body>
+</html>
